@@ -2,6 +2,7 @@
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("Choose a row width: ");
@@ -12,10 +13,24 @@
 
             //print rows
             Console.WriteLine();
-            for (int i = 1; i < rows; i++)
+            for (int i = 0; i < rows; i++)
             {
                 //inner for loop printing in width
-                for(int j = 1; j < rows; j++)
+                for(int j = 0; j < width; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Enter the max number of asterisks in a row");
+            int maxasterisks = Int32.Parse(Console.ReadLine());
+                
+
+            for (int f = 0; f <= maxasterisks; f++)
+            {
+                //inner for loop printing in width
+                for (int t = 0; t <= f; t++)
                 {
                     Console.Write("*");
                 }
